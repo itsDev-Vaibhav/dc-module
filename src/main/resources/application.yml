@@ -1,0 +1,25 @@
+
+#https://ssa-web-api.herokuapp.com/ssn/643434
+
+server:
+  port: 9092
+logging:
+  level:
+    root: error
+    '[org.springframework]': info
+    '[org.hibernate]': error
+spring:
+  application:
+    name: DC-MODULE
+  datasource:
+    username: jrtp
+    password: Jrtp21@1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/njhis
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      dialect: org.hibernate.dialect.MySQLDialect
