@@ -25,6 +25,4 @@ public class CaseChilds {
 	private String childName;
 	private Integer childAge;
 	private String childSSN;
-	
-
 }
