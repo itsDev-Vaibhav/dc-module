@@ -1,5 +1,6 @@
 package org.jrtp.dcmodule.service;
 
+import org.jrtp.dcmodule.rest.request.DcRequest;
 import org.jrtp.dcmodule.rest.response.SearchAppResponse;
 
 /**
@@ -18,6 +19,12 @@ public interface CaseService {
 	 * @return
 	 */
 	Object getPlans();
+
+	/**
+	 * @param request
+	 * @return
+	 */
+	Object createCase(DcRequest request);
 
 
 }

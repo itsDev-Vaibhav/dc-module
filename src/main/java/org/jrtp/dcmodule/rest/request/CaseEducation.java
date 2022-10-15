@@ -9,7 +9,7 @@ import lombok.Data;
  */
 
 @Data
-public class Education {
+public class CaseEducation {
 	private String highestDegree;
 	private Integer graduationYear;
 	private String university;

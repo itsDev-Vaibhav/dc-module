@@ -9,7 +9,7 @@ import lombok.Data;
  */
 
 @Data
-public class IncomeRequest {
+public class CaseIncome {
 	private Long monthlySalary;
 	private Long rentIncome;
 	private Long propertyIncome;

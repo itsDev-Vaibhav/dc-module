@@ -27,7 +27,10 @@ public class CaseController {
 	@GetMapping("/searchapp/{appId}")
 	public ResponseEntity<SearchAppResponse> searchApplication(@PathVariable Long appId) {
 		SearchAppResponse appId2 = caseService.getAppId(appId);
-		
+		if(appId2.getAppId() != 0) {
+			return new ResponseEntity<> (appId2, HttpStatus.OK);
+		}
+		return new ResponseEntity<> (new SearchAppResponse(), HttpStatus.BAD_REQUEST);
 		
 	}
 	
@@ -36,5 +39,10 @@ public class CaseController {
 		return new ResponseEntity<> (caseService.getPlans() , HttpStatus.OK );
 	}
 	
-
+	
+	@GetMapping("/collect-data")
+	public ResponseEntity<?> saveCollectedData(@RequestBody DcRequest request) {
+		return new ResponseEntity<> (caseService.createCase(request) , HttpStatus.OK );
+	}
+	
 }
